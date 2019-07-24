@@ -1,0 +1,7 @@
+// Empty
+[
+    {
+        "key": "ctrl+[BracketLeft]",
+        "command": "workbench.action.terminal.toggleTerminal"
+    }
+]
