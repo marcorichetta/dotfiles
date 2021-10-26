@@ -66,6 +66,12 @@ bindkey '^[[Z' undo                                             # Shift+tab undo
 alias cp="cp -i"                                                # Confirm before overwriting something
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
+alias gt="git status"
+alias gl="git log"
+alias gp="git pull"
+alias gx="git push"
+alias ll="ls -l"
+alias la="ls -la"
 
 # Theming section
 autoload -Uz compinit colors promptinit
@@ -104,6 +110,11 @@ if [[ -r /usr/share/zsh/functions/command-not-found.zsh ]]; then
     export PKGFILE_PROMPT_INSTALL_MISSING=1
 fi
 
+# Para uso de claves gpg en commits
+export GPG_TTY=$(tty)
+
 # Starship
 eval "$(starship init zsh)"
 
+# nvm auto activation 
+source /usr/share/nvm/init-nvm.sh
