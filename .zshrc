@@ -112,7 +112,10 @@ fi
 
 # Para uso de claves gpg en commits
 export GPG_TTY=$(tty)
-
+# Para uso por parte del ssh-agent.service
+# https://wiki.archlinux.org/title/SSH_keys#Start_ssh-agent_with_systemd_user
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+ 
 # Starship
 eval "$(starship init zsh)"
 
