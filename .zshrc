@@ -63,6 +63,7 @@ bindkey '^H' backward-kill-word                                 # delete previou
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
 
 ## Alias section
+alias ls="lsd"
 alias cp="cp -i"                                                # Confirm before overwriting something
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
@@ -118,6 +119,9 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
  
 # Starship
 eval "$(starship init zsh)"
+
+# Direnv
+eval "$(direnv hook zsh)"
 
 # nvm auto activation 
 source /usr/share/nvm/init-nvm.sh
