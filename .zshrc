@@ -23,10 +23,15 @@ setopt appendhistory                                            # Immediately ap
 setopt histignorealldups                                        # If a new command is a duplicate, remove the older one
 setopt autocd                                                   # if only directory path is entered, cd there.
 setopt inc_append_history                                       # save commands are added to the history immediately, otherwise only when shell exits.
+setopt AUTO_PUSHD                                               # pushes the old directory onto the stack
+setopt PUSHD_MINUS                                              # exchange the meanings of '+' and '-'
+setopt CDABLE_VARS                                              # expand the expression (allows 'cd -2/tmp')
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
 zstyle ':completion:*' rehash true                              # automatically find new executables in path
+zstyle ':completion:*:directory-stack' list-colors '=(#b) #([0-9]#)*( *)==95=38;5;12'
+
 # Speed up completions
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
@@ -106,6 +111,7 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # Offer to install missing package if command is not found
+# FIXME - .sh doesn't exist on standard zsh installation
 if [[ -r /usr/share/zsh/functions/command-not-found.zsh ]]; then
     source /usr/share/zsh/functions/command-not-found.zsh
     export PKGFILE_PROMPT_INSTALL_MISSING=1
