@@ -131,3 +131,6 @@ eval "$(direnv hook zsh)"
 
 # nvm auto activation 
 source /usr/share/nvm/init-nvm.sh
+
+# Created by `pipx` on 2022-03-26 14:58:28
+export PATH="$PATH:/home/marco/.local/bin"
