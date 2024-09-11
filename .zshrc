@@ -144,3 +144,6 @@ eval "$(pyenv init -)"
 eval "$(devbox global shellenv)"
 
 if [ -e /home/marco/.nix-profile/etc/profile.d/nix.sh ]; then . /home/marco/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+# uv script
+source $HOME/.cargo/env
