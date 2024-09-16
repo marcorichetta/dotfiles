@@ -129,16 +129,8 @@ eval "$(starship init zsh)"
 # Direnv
 eval "$(direnv hook zsh)"
 
-# nvm auto activation 
-source /usr/share/nvm/init-nvm.sh
-
 # Created by `pipx` on 2022-03-26 14:58:28
 export PATH="$PATH:/home/marco/.local/bin"
-
-# pyenv https://github.com/pyenv/pyenv#set-up-your-shell-environment-for-pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
 # Devbox Global
 eval "$(devbox global shellenv)"
