@@ -1,0 +1,19 @@
+configuration {
+	modes: "window,drun,calc,combi,run";
+	show-match: true;
+	terse: true;
+	show-icons: true;
+	sort: false;
+	sidebar-mode: true;
+	combi-modes: [window,drun,calc];
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+
+@theme "/usr/share/rofi/themes/DarkBlue.rasi"

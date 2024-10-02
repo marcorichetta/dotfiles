@@ -1,0 +1,18 @@
+# Ignorar todos los archivos y carpetas
+/*
+
+# No ignorar el archivo .gitignore
+!.gitignore
+
+# No ignorar la carpeta .config
+!/.config/
+
+# Ignorar todo dentro de .config
+.config/*
+
+# No ignorar la carpeta hypr y sus contenidos
+!/.config/hypr/
+!/.config/waybar/
+!/.config/rofi/
+!/.config/swaync/
+!/.config/wlogout/
