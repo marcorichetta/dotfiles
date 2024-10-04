@@ -1,11 +1,11 @@
 configuration {
-	modes: "window,drun,calc,combi,run";
+	modes: "window,drun,calc,combi,run,emoji:rofimoji";
 	show-match: true;
 	terse: true;
 	show-icons: true;
 	sort: false;
 	sidebar-mode: true;
-	combi-modes: [window,drun,calc];
+	combi-modes: [window,drun,emoji];
   timeout {
       action: "kb-cancel";
       delay:  0;
