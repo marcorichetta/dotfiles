@@ -24,7 +24,7 @@
         "backlight",
         "battery",
         "tray",
-        "custom/power",
+        //"custom/power",
         "custom/notification"
     ],
     // Modules configuration
