@@ -78,6 +78,7 @@ alias gp="git pull"
 alias gx="git push"
 alias ll="ls -l"
 alias la="ls -la"
+alias cat="bat"
 
 # Theming section
 autoload -Uz compinit colors promptinit
@@ -139,3 +140,5 @@ if [ -e /home/marco/.nix-profile/etc/profile.d/nix.sh ]; then . /home/marco/.nix
 
 # uv script
 source $HOME/.cargo/env
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
