@@ -139,6 +139,7 @@ eval "$(devbox global shellenv)"
 if [ -e /home/marco/.nix-profile/etc/profile.d/nix.sh ]; then . /home/marco/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 # uv script
-source $HOME/.cargo/env
+source $HOME/.local/bin/env
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
+
